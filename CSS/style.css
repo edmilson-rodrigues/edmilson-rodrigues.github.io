@@ -1,0 +1,282 @@
+@charset "utf-8";
+
+/*-------Estilização geral----------------*/
+    *{
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+
+    }
+
+    p{    
+        display: block;
+        margin-block-start: 1em;
+        margin-block-end: 1em;
+        margin-inline-start: 0px;
+        margin-inline-end: 0px;
+    }
+
+/*--------Estilo generalizado do body-----*/
+
+    body{
+        font-family: Arial, Helvetica, sans-serif;
+        background: #fff;
+        color: #000;
+        font-size:15;
+        line-height: 1.5;
+    }
+
+/*---------Estilização dos links em geral---*/
+    a{
+        color: #da70d6;
+        text-decoration: none;
+    }
+
+/*---------Listas não ordenadas (ul)-------*/
+    ul{
+        list-style: none;
+    }
+
+/*--------Estilo geral do container--------*/
+    .container{
+        width:90%;
+        max-width: 1100px;
+        margin: auto;
+    }
+
+/*--------Navegação superior--------------*/
+    .main-nav{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 20px 0px;
+    }
+    .main-nav .logo{
+        width: 80px;
+    }
+    .main-nav ul{
+        display: flex;
+    }
+    .main-nav ul li{
+        padding: 0 10px;
+    }
+    .main-nav ul li a:hover{
+        border-bottom: orchid 2px solid;
+        padding-bottom: 2px;
+    }
+    .main-menu{
+        flex: 1;
+        margin-left: 20px;
+    }
+
+/*--------Estilizando header-text----------*/
+    .header-text{
+        width: 100%;
+        height: 400px;
+        background: url("../images/forma.jpg");
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        border-radius: 2%;
+        padding: 20px;
+        border: 10px solid #8180813d;
+        align-items: center;
+        text-align: center;
+        justify-content: flex-end;
+        margin-bottom: 50px;
+        display: inline-flex;
+        flex-direction: column;
+    }
+    .header-text{
+        color: #ddd;
+    }
+    
+    .amostras>div{
+        margin-top: 5px;
+    }
+    .botao{
+        margin: 10px 0px;
+        padding: 10px 30px;
+        background: transparent;
+        border: 2px solid orchid;
+        outline: none;
+        align-items: center;
+        color: #ddd;
+        font-weight: bold;
+        cursor: pointer;
+
+    }
+
+
+/*--------Estilizando as grid--------------*/
+    .grid{
+        display: grid;
+        grid-template-columns: repeat(4,1fr);
+        grid-gap: 20px;
+    }
+    .grid h1{
+        margin-bottom: 10px;
+    }
+    .grid a{
+        display: inline-block;
+        padding: 10px;
+        text-transform: uppercase;
+        font-weight: bold;
+        color: orchid;
+    }  
+    .grid img{
+        width: 100%;
+        margin-bottom: 15px;
+    }
+
+/*--------Estilizando a section (primeira)----------*/
+    .primeira{
+        background: url(../images/img-9.jpg);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        width: 100%;
+        height: 350px;
+        margin-bottom: 15px;
+    }
+/*--------Estilizando a section (ultima)----------*/
+    .ultima{
+        background: url(../images/studiof.jpg);
+        background-position:center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        width: 100%;
+        height: 350px;
+    }
+/*--------Estilizando os icones das redes sociais----------*/
+    .sociais{
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+    }
+/*--------Estilizando os links----------*/
+    .links{
+        background: #616161;
+        padding: 35px 0px;
+    }
+    .links-inner{
+        max-width: 1100px;
+        margin: 0 auto;
+        padding: 0 20px;
+        display: grid;
+        grid-template-columns: repeat(6,1fr);
+        grid-gap: 10px;
+        align-items: flex-start;
+        justify-content: center;
+
+
+    }
+/*--------Estilizando footer----------*/
+  .footer{
+      background: #f2f2f2;
+      color: #616161;
+      font-size: 12px;
+      padding: 20px 0px;
+  }
+  footer{
+      display: block;
+  }
+  footer div{
+      margin-bottom: 15px;
+      display: flex;
+      align-items: center;
+  }
+  .footer-inner{
+      max-width: 1100px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+  }
+  .footer ul{
+      display:flex;
+      flex-wrap: wrap;
+  }
+  .footer li{
+      margin-right: 30px;
+      margin-bottom: 15px;
+  }
+
+  /***media queries***/
+  @media(max-width: 700px){
+    .menu-btn{
+      display: block;
+    }
+    .menu-btn:hover{
+      opacity: 0.5;
+    }
+    .main-nav .rigth-menu{
+      margin-right: 50px;
+    }
+    .main-nav .main-menu{
+      display: block;
+      position: absolute;
+      top:0;
+      left:0;
+      background: orchid;
+      widows: 50%;
+      height: 100%;
+      border-right: magenta 1px solid;
+      opacity: 0.9;
+      padding: 30px;
+      transform: translateX(-500px);
+      transition: transform 0.5s ease-in-out;
+    }
+    .main-nav .main-menu li{
+      padding: 10px;
+      border-bottom: #ccc solid 1px;
+      font-size: 14px;
+    }
+    .main-nav .main-menu li:last-child{
+      border-bottom: 0;
+    }
+    .main-nav .main-menu.mostrar{
+      transform: translateX(-20px);
+    }
+    .partes{
+      display: grid;
+      grid-template-columns: repeat(2,1fr);
+    }
+    .segunda .content p{
+      display: none;
+    }
+    .segunda .content h2{
+      margin-bottom: 20px;
+    }
+    .ultima.content h2{
+      margin-bottom: 20px;
+    }
+    .ultima .content{
+      width: 85%;
+    }
+    .links .links-inner{
+      grid-template-columns: repeat(2,1fr);
+    }
+  
+      .partes{
+          display: grid;
+          grid-template-columns: repeat(2,1fr);
+  
+      }
+      .segunda .content p{
+          display: none;
+      }
+      .segunda .content h2{
+          margin-bottom: 20px;
+      }
+      .ultima .content{
+          width: 85%;
+      }
+      .links .links-inner{
+          grid-template-columns: repeat(2, 1fr);
+      }
+  
+  }
+  
+
