@@ -1,0 +1,58 @@
+.auth-section {
+  left: 0;
+  right: 0;
+  margin: auto;
+  width: 300px;
+}
+.auth-section .logo-center {
+  width: 80px;
+  height: 80px;
+  left: 0;
+  right: 0;
+  margin: auto;
+}
+.auth-section .logo-center img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  filter: contrast(0%) brightness(150%);
+}
+.auth-section form {
+  width: 100%;
+  margin-top: 20px;
+}
+.auth-section form .devider-width {
+  left: 0;
+  right: 0;
+  margin: auto;
+  width: 60%;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+.auth-section form .go-back {
+  text-align: center;
+  font-size: 13px;
+}
+.auth-section form .go-back a {
+  font-weight: 600;
+  color: #fff;
+  text-decoration: none;
+}
+.auth-section form .div-line {
+  width: 100%;
+}
+.auth-section form .div-line input {
+  width: 100%;
+  height: 40px;
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  background: transparent;
+  font-size: 13px;
+  font-weight: 600;
+  color: #fff;
+  padding: 0 15px;
+}
+.auth-section form .div-line input[type=submit] {
+  background-color: var(--contrast-color);
+  border: none;
+}/*# sourceMappingURL=login.css.map */
